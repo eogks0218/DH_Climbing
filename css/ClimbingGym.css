@@ -1,0 +1,761 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'nanum';
+    color: #3C3633;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #EEEDEB;
+}
+
+@font-face {
+    font-family: 'nanum';
+    src: url(../Font/Nanum/NanumSquareRoundR.woff) format(woff)
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url(../Font/Pacifico.ttf);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.headContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    z-index: 200;
+    background-color: #EEEDEB;
+    min-width: 720px;
+}
+
+.headContainer div{
+    position: absolute;
+    left: 10%;
+    z-index: 10; 
+    padding: 13px 20px 13px 20px;
+    color: rgba(75,75,75,1);
+    line-height: 1;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -.05em;
+    background: transparent;		
+    text-shadow: 0 1px 1px rgba(255,255,255,.9);
+    font-family: Pacifico;
+}
+
+#menu{
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.15);
+    background: #ccc; 
+}
+
+#menu > li {
+    float: right;
+    position: relative;
+    border-left: 1px solid rgba(0,0,0,.1);
+    border-right: 1px solid rgba(0,0,0,.1);
+    box-shadow: 1px 0 0 rgba(255,255,255,.25);
+    perspective: 1000px;   
+}
+
+#menu > li:first-child {
+    border-left: 1px solid rgba(255,255,255,.25);
+    box-shadow: -1px 0 0 rgba(0,0,0,.1), 1px 0 0 rgba(255,255,255,.25);
+}
+
+#menu a {
+    display: block;
+    position: relative;
+    z-index: 10;
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: rgba(75,75,75,1);
+    line-height: 1;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -.05em;
+    background: transparent;		
+    text-shadow: 0 1px 1px rgba(255,255,255,.9);
+    transition: all .25s ease-in-out;
+}
+
+#menu > li:hover > a {
+    background: #3C3633;
+    color: #68D2E8;
+    text-shadow: none;
+}
+
+#menu li ul  {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 200px;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: transparent;
+    overflow: hidden;
+    transform-origin: 50% 0%;
+}
+
+
+#menu li:hover ul {
+    padding: 15px 0;
+    background: #3C3633;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+    animation-name: swingdown;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes swingdown {
+    0%{
+        opacity: .99999;
+        transform: rotateX(90deg);
+    }
+    30%{			
+        transform: rotateX(-20deg) rotateY(5deg);
+        animation-timing-function: ease-in-out;
+    }
+    65%{
+        transform: rotateX(20deg) rotateY(-3deg);
+        animation-timing-function: ease-in-out;
+    }
+    100%{
+        transform: rotateX(0);
+        animation-timing-function: ease-in-out;
+    }
+}
+
+#menu li li a {
+    padding-left: 15px;
+    font-weight: 400;
+    color: #EEF7FF;
+    text-shadow: none;
+    border-top: dotted 1px transparent;
+    border-bottom: dotted 1px transparent;
+    transition: all .15s linear;
+}
+
+#menu li li a:hover {
+    color: #68D2E8;
+    border-top: dotted 1px rgba(255,255,255,.15);
+    border-bottom: dotted 1px rgba(255,255,255,.15);
+    background: rgba(0,223,252,.02);
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+.bodyContainer{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    transition: all 3s ease-in-out;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+#ClimbingGymHeader{
+    width: 50%;
+    margin: 0 auto; 
+    margin-bottom: 50px;
+    padding: 50px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url(../Font/Oswald/Oswald-Bold.ttf);
+}
+
+#ClimbingGymHeader h1 {
+    font-weight: normal;
+    margin: 0.3125em 0;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    font-family: "Oswald";
+    text-transform: uppercase;
+    background-color: #EEEDEB;
+}
+
+#ClimbingGymHeader h1::before {
+    content: "";
+    border-top: 1px solid #3C3633;
+    position: absolute;
+    width: 300%;
+    top: 35%;
+    left: -100%;
+    z-index: -999;
+}
+#ClimbingGymHeader h1::after {
+    content: "";
+    border-bottom: 1px solid #3C3633;
+    position: absolute;
+    width: 300%;
+    bottom: 35%;
+    left: -100%;
+    z-index: -999;
+}
+
+#sideMenu {
+    position: fixed;
+    left: 50px;
+    top: 30%;
+    z-index: 100;
+}
+
+#sideMenu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#sideMenu ul li {
+    margin: 100px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 1.5s ease-in-out;
+    position: relative;
+}
+
+#sideMenu ul li a {
+    font-size: 1.5vh;
+    font-weight: bold;
+    text-decoration: none;
+    color: #747264;
+    position: relative;
+    background: linear-gradient(currentColor 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-size 0.45s 0.04s, color 0.6s;
+}
+
+#sideMenu ul li:nth-child(1) a{
+    --menu-link-color: #3C3633;
+}
+
+#sideMenu ul li:nth-child(2) a{
+    --menu-link-color: #4D869C;
+}
+
+#sideMenu ul li:nth-child(3) a{
+    --menu-link-color: #003285;
+}
+
+#sideMenu ul li:nth-child(4) a{
+    --menu-link-color: #A91D3A;
+}
+
+#sideMenu ul li a::before {
+    position: absolute;
+    content: attr(data-text);
+    z-index: -1;
+    color: #747264;
+}
+
+#sideMenu ul li::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -1rem;
+    width: 0.25rem;
+    height: 100%;
+    transition: 0.6s;
+}
+
+#sideMenu ul li:nth-child(1)::before{
+    background: #3C3633;
+}
+
+#sideMenu ul li:nth-child(2)::before{
+    background: #4D869C;
+}
+
+#sideMenu ul li:nth-child(3)::before{
+    background: #003285;
+}
+
+#sideMenu ul li:nth-child(4)::before{
+    background: #A91D3A;
+}
+
+#sideMenu ul li:hover::before {
+    left: calc(100% + 1rem);
+}
+
+#sideMenu ul li:hover a {
+    background-size: 100%;
+    color: var(--menu-link-color);
+}
+
+@media (max-width: 1000px){
+    #sideMenu{
+        display: none;
+    }
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+footer div{
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+    background-image: url(../img/arrowUp2.png);
+    background-color: white;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 15px);
+    border-radius: 10px 10px 0 0;
+}
+
+#Seoul, #Gyeonggi, #Else{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 600px;
+    max-width: 1000px;
+}
+
+.ClimbingGymContentTitle{
+    margin-bottom: 50px;
+    font-size: 2.5vh;
+}
+
+.ClimbingGymContentContent h3{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 1.5vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.ClimbingGymContentContent h3 img{
+    width: 25px;
+    margin-left: 10px;
+    transition: all .5s linear;
+}
+
+.SeoulUl{
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    transition: all .5s linear;
+}
+
+.SeoulTitle{
+    min-width: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1vh;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    background-color: #F1F1F1;
+}
+.SeoulTitle:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#Seoul>div>div>h3:nth-child(1):hover{
+    color: #C73659;
+}
+#Seoul>div>div>h3:nth-child(3):hover{
+    color: #DC5F00;
+}
+#Seoul>div>div>h3:nth-child(5):hover{
+    color: #C69749;
+}
+#Seoul>div>div>h3:nth-child(7):hover{
+    color: #008170;
+}
+#Seoul>div>div>h3:nth-child(9):hover{
+    color: #5C88C4;
+}
+#Seoul>div>div>h3:nth-child(11):hover{
+    color: #86469C;
+}
+
+.SeoulContent span img{
+    width: 15px;
+    margin-right: 10px;
+}
+.SeoulLi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    width: 100%;
+}
+.SeoulContent{
+    width: 60%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; 
+    left: 40%;
+    transition: all 1s ease-in-out;
+    background-color: white; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+    font-size: 1vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#theClimbUl>div:nth-child(1)>.SeoulContent{
+    top: 0;
+}
+#theClimbUl>div:nth-child(2)>.SeoulContent{
+    top: -100%;
+}
+#theClimbUl>div:nth-child(3)>.SeoulContent{
+    top: -200%;
+}
+#theClimbUl>div:nth-child(4)>.SeoulContent{
+    top: -300%;
+}
+#theClimbUl>div:nth-child(5)>.SeoulContent{
+    top: -400%;
+}
+#theClimbUl>div:nth-child(6)>.SeoulContent{
+    top: -500%;
+}
+#theClimbUl>div:nth-child(7)>.SeoulContent{
+    top: -600%;
+}
+#theClimbUl>div:nth-child(8)>.SeoulContent{
+    top: -700%;
+}
+#theClimbUl>div:nth-child(9)>.SeoulContent{
+    top: -800%;
+}
+#theClimbUl>div:nth-child(10)>.SeoulContent{
+    top: -900%;
+}
+#parkUl>div:nth-child(1)>.SeoulContent{
+    top: -200%;
+}
+#parkUl>div:nth-child(2)>.SeoulContent{
+    top: -300%;
+}
+#parkUl>div:nth-child(3)>.SeoulContent{
+    top: -400%;
+}
+#parkUl>div:nth-child(4)>.SeoulContent{
+    top: -500%;
+}
+#forestUl>div:nth-child(1)>.SeoulContent{
+    top: -350%;
+}
+#forestUl>div:nth-child(2)>.SeoulContent{
+    top: -450%;
+}
+#forestUl>div:nth-child(3)>.SeoulContent{
+    top: -550%;
+}
+#forestUl>div:nth-child(4)>.SeoulContent{
+    top: -650%;
+}
+#forestUl>div:nth-child(5)>.SeoulContent{
+    top: -750%;
+}
+#peakersUl>div:nth-child(1)>.SeoulContent{
+    top: -450%;
+}
+#peakersUl>div:nth-child(2)>.SeoulContent{
+    top: -550%;
+}
+#peakersUl>div:nth-child(3)>.SeoulContent{
+    top: -650%;
+}
+#sswUl>div:nth-child(1)>.SeoulContent{
+    top: -670%;
+}
+#sswUl>div:nth-child(2)>.SeoulContent{
+    top: -770%;
+}
+#allezUl>div:nth-child(1)>.SeoulContent{
+    top: -700%;
+}
+#allezUl>div:nth-child(2)>.SeoulContent{
+    top: -800%;
+}
+#allezUl>div:nth-child(3)>.SeoulContent{
+    top: -900%;
+}
+
+
+.SeoulContent div{
+    width: 85%;
+    height: 300px;
+    margin: 20px;
+}
+
+.SeoulContent div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.SeoulContent span{
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.SeoulContent span img{
+    width: 15px;
+    margin-right: 10px;
+}
+
+.SeoulContent span a{
+    color: #D2649A;
+}
+
+.ClimbingGymContentContent h3:hover .gymClick{
+    margin: 0;
+}
+
+#Gyeonggi .ClimbingGymContent .ClimbingGymContentContent{
+    display: flex;
+    flex-direction: column;
+}
+#Gyeonggi .ClimbingGymContent .ClimbingGymContentContent ul li{
+    min-width: auto;
+}
+
+#Else .ClimbingGymContent .ClimbingGymContentContent ul li{
+    cursor: default;
+}
+
+#Seoul .ClimbingGymContent .ClimbingGymContentContent{
+    padding: 0 10px;
+}
+
+.ElseLi{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+    max-height: 40px;
+    transition: all 1.5s ease-in-out;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px;
+    padding: 10px 20px;
+    background-color: #F6F5F2;
+    border-radius: 10px;
+}
+
+.ElseContent{
+    font-size: 1.3vh;
+    line-height: 1.5;
+    transition: all 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    font-weight: bold;
+}
+.ElseContent span{
+    margin-bottom: 20px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.ElseContent span img{
+    width: 15px;
+    margin-right: 10px;
+}
+
+.ElseContent span a{
+    color: #D2649A;
+}
+
+.ElseTitle{
+    transition: all 1.5s ease-in-out;
+}
+
+.ElseLi:hover{
+    max-height: 1500px;
+}
+
+.ElseLi:hover .ElseTitle{
+    font-size: 1.2vh;
+    font-weight: bold;
+}
+
+.ElseLi:hover .ElseContent{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ElseContent div{
+    width: 500px;
+    height: 450px;
+    margin: 20px;
+}
+.ElseContent div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.GyeonggiTitle{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2vh;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: box-shadow 0.25s ease-in-out;
+    cursor: pointer;
+    background-color: #F1F1F1;
+}
+
+.GyeonggiTitle:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.GyeonggiLi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+.GyeonggiContent{
+    width: 60%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; 
+    left: 40%;
+    transition: all 1s ease-in-out;
+    background-color: white; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+    font-size: 1vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#bbloc{
+    top: -100%;
+}
+#catchstone{
+    top: -200%;
+}
+#rocktree{
+    top: -300%;
+}
+#days{
+    top: -400%;
+}
+#bounce{
+    top: -500%;
+}
+#garden{
+    top: -600%;
+}
+#hub{
+    top: -700%;
+}
+#zoom{
+    top: -800%;
+}
+
+.GyeonggiContent div{
+    width: 85%;
+    height: 300px;
+    margin: 20px;
+}
+#catchstone div, #rocktree div{
+    height: 260px;
+}
+#bounce div, #zoom div{
+    height: 270px;
+}
+#hub div{
+    height: 250px;
+}
+
+.GyeonggiContent div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.GyeonggiContent span{
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.GyeonggiContent span img{
+    width: 15px;
+    margin-right: 10px;
+}
+
+.GyeonggiContent span a{
+    color: #D2649A;
+}
