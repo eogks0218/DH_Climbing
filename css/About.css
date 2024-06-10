@@ -669,3 +669,67 @@ footer div{
 .TerminologyContent ul{
     display: none;
 }
+
+@media (max-width: 768px){
+    .headContainer div{
+        display: none;
+    }
+    #menu{
+        width: auto;
+        li ul{
+            right: auto;
+        }
+    }
+    #aboutHeader h1{
+        font-size: 2vh;
+        span{
+            font-size: .9vh;
+        }
+    }
+    .ProsAndConsTitle, .EquipTitle, .TerminologyTitle{
+        font-size: 2vh;
+    }
+    .ProsAndConsContent>span{
+        font-size: 1.2vh;
+    }
+    #ProsAndCons, #Equip, #Terminology, #aboutHeader{
+        width: 80%;
+    }
+    .ProsAndConsContentTitle{
+        min-width: auto;
+        font-size: 1vh;
+    }
+    .ProsAndConsContentContent{
+        font-size: .9vh;
+    }
+    .EquipContent>div{
+        font-size: 1vh;
+    }
+    .EquipContent>span{
+        font-size: 1.3vh;
+    }
+    .EquipContentTitle{
+        min-width: auto;
+        width: 100px;
+        height: 100px;
+    }
+    .EquipContentContent{
+        font-size: .9vh;
+    }
+    .EquipContentContent>span{
+        font-size: 1.2vh;
+    }
+    .TerminologyContent>div{
+        font-size: 1vh;
+    }
+    .TerminologyContent>span{
+        font-size: 1.3vh;
+    }
+    .TerminologyContentTitle{
+        min-width: 100px;
+        font-size: 1.2vh;
+    }
+    .TerminologyContentContent{
+        font-size: .9vh;
+    }
+}

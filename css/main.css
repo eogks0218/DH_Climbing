@@ -719,3 +719,149 @@ footer div{
     font-family: 'Pacifico';
     src: url(../Font/Pacifico.ttf);
 }
+
+@media (max-width: 768px) {
+    .headContainer{
+        min-width: 100px !important;
+        max-width: 800px !important;
+        >ul{
+            width: 100%;
+        }
+    }
+    #basicLogo{
+        display: none;
+    }
+    .mainMenu{
+        > a{
+            font-size: .9rem;
+        }
+    }
+    .menu{
+        padding: 0;
+
+        >a{
+            font-size: .5rem;
+        }
+    }
+    .subMenu{
+        opacity: 1 !important;
+        transition: none;
+        visibility: visible !important;
+        width: 80px;
+    }
+    .mainIntroduce{
+        h1{
+            font-size: 1.2rem;
+            span{
+                font-size: 1.7rem;
+            }
+        }
+        >div{
+            font-size: 1rem;
+            span{
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .imgBox{
+        width: 300px;
+        height: 160px;
+        >li{
+            width: 300px;
+            height: 160px;
+            background-size: cover;
+        }
+    }
+    #previousImg{
+        width: 40px;
+        height: 40px;
+    }
+    #nextImg{
+        width: 40px;
+        height: 40px;
+    }
+    #playImg{
+        width: 40px;
+        height: 40px;
+    }
+    #stopImg{
+        width: 50px;
+        height: 50px;
+    }
+    #btnBox{
+        width: 70%;
+    }
+    #IntroduceClimbing, #IntroduceClimbing2{
+        min-width: 100px !important;
+        background: rgba(246, 244, 232, 0.8);
+    }
+    .ClimbTitle, .ClimbTitle2{
+        font-size: 1.5rem;
+    }
+    .Introduce, .Introduce2{
+        font-size: .8rem;
+        opacity: 1;
+        width: 80%;
+        line-height: 1.2;
+        p{
+            span{
+                font-size: 1rem;
+            }
+        }
+    }
+    .showVideo{
+        img{
+            width: 15px;
+        }
+    }
+    .video{
+        video{
+            width: 250px;
+        }
+        left: auto;
+        bottom: auto;
+    }
+    #bodyMenu{
+        h1{
+            font-size: 2rem;
+        }
+    }
+    .bodyMenuBackground{
+        width: 400px;
+        margin: 0 auto;
+        background: #1D3124;
+        a{
+            font-size: 1.2rem;
+        }
+    }
+    #climbingPlayerBox{
+        h1{
+            font-size: 2rem;
+        }
+    }
+    #climbingPlayerIntroduce{
+        font-size: 1rem;
+    }
+    .climbinPlayerImg{
+        width: 200px;
+        height: 150px;
+        .climbingPlayerBtn{
+            font-size: 2rem
+        }
+        .playerName{
+            font-size: 1.5rem;
+        }
+        .playerClass{
+            font-size: 1rem;
+        }
+    }
+    
+    .playerInstagram{
+        div{
+            font-size: 1rem;
+        }
+    }
+    .playerImg{
+        width: 20px;
+    }
+}

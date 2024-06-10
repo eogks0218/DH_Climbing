@@ -491,3 +491,36 @@ blockquote.bluejeans{
     border-left-color: #5e9de6;
     border-right-color: #4b8ad6;
 }
+
+@media (max-width: 768px){
+    .headContainer div{
+        display: none;
+    }
+    #menu{
+        width: auto;
+        li ul{
+            right: auto;
+        }
+    }
+    #aboutHeader h1{
+        font-size: 2vh;
+        span{
+            font-size: .9vh;
+        }
+    }
+    #precautionsHeader, #Ethics, #Precautions, #Anti-Injury{
+        width: 80%;
+    }
+    .PrecautionsContentTitle{
+        font-size: 2vh;
+    }
+    .PrecautionsContentContentSpan{
+        font-size: 1vh;
+        opacity: 1;
+        margin-top: 10px;
+        transform: none;
+    }
+    .PrecautionsContentContent{
+        max-height: 1500px;
+    }
+}

@@ -759,3 +759,170 @@ footer div{
 .GyeonggiContent span a{
     color: #D2649A;
 }
+
+@media (max-width: 768px) {
+    .headContainer div{
+        display: none;
+    }
+    #menu{
+        width: auto;
+        li ul{
+            right: auto;
+        }
+    }
+    #aboutHeader h1{
+        font-size: 2vh;
+        span{
+            font-size: .9vh;
+        }
+    }
+    #ClimbingGymHeader{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .ClimbingGymContentTitle{
+        font-size: 2vh;
+    }
+    #Seoul, #Gyeonggi, #Else{
+        width: 80%;
+        min-width: auto;
+    }
+    .ClimbingGymContentContent h3{
+        font-size: 1.2vh;
+    }
+    .SeoulTitle{
+        font-size: .9vh;
+    }
+    .SeoulContent{
+        width: 100%;
+        left: 0;
+    }
+    #theClimbUl>div:nth-child(1)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(2)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(3)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(4)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(5)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(6)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(7)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(8)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(9)>.SeoulContent{
+        top: 100%;
+    }
+    #theClimbUl>div:nth-child(10)>.SeoulContent{
+        top: 100%;
+    }
+    #parkUl>div:nth-child(1)>.SeoulContent{
+        top: 100%;
+    }
+    #parkUl>div:nth-child(2)>.SeoulContent{
+        top: 100%;
+    }
+    #parkUl>div:nth-child(3)>.SeoulContent{
+        top: 100%;
+    }
+    #parkUl>div:nth-child(4)>.SeoulContent{
+        top: 100%;
+    }
+    #forestUl>div:nth-child(1)>.SeoulContent{
+        top: 100%;
+    }
+    #forestUl>div:nth-child(2)>.SeoulContent{
+        top: 100%;
+    }
+    #forestUl>div:nth-child(3)>.SeoulContent{
+        top: 100%;
+    }
+    #forestUl>div:nth-child(4)>.SeoulContent{
+        top: 100%;
+    }
+    #forestUl>div:nth-child(5)>.SeoulContent{
+        top: 100%;
+    }
+    #peakersUl>div:nth-child(1)>.SeoulContent{
+        top:100%;
+    }
+    #peakersUl>div:nth-child(2)>.SeoulContent{
+        top:100%;
+    }
+    #peakersUl>div:nth-child(3)>.SeoulContent{
+        top:100%;
+    }
+    #sswUl>div:nth-child(1)>.SeoulContent{
+        top: 100%;
+    }
+    #sswUl>div:nth-child(2)>.SeoulContent{
+        top: 100%;
+    }
+    #allezUl>div:nth-child(1)>.SeoulContent{
+        top: 100%;
+    }
+    #allezUl>div:nth-child(2)>.SeoulContent{
+        top: 100%;
+    }
+    #allezUl>div:nth-child(3)>.SeoulContent{
+        top: 100%;
+    }
+    .GyeonggiTitle{
+        font-size: 1.1vh;
+    }
+    .GyeonggiContent{
+        width: 100%;
+        left: 0;
+    }
+    #bbloc{
+        top: 100%;
+    }
+    #catchstone{
+        top: 100%;
+    }
+    #rocktree{
+        top: 100%;
+    }
+    #days{
+        top: 100%;
+    }
+    #bounce{
+        top: 100%;
+    }
+    #garden{
+        top: 100%;
+    }
+    #hub{
+        top: 100%;
+    }
+    #zoom{
+        top: 100%;
+    }
+    .ElseTitle{
+        font-size: 1vh;
+    }
+    .ElseLi{
+        max-height: 1500px;
+    }
+    .ElseContent{
+        font-size: .9vh;
+        opacity: 1;
+        transform: none;
+        margin-top: 10px;
+    }
+    .ElseContent div{
+        width: auto;
+        height: auto;
+    }
+}
